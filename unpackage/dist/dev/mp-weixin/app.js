@@ -1,6 +1,12 @@
 "use strict";
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const common_vendor = require("./common/vendor.js");
+if (!Math) {
+  "./pages/Home/Home.js";
+  "./pages/Cate/Cate.js";
+  "./pages/Cart/Cart.js";
+  "./pages/My/My.js";
+}
 const _sfc_main = {
   onLaunch: function() {
     console.warn("当前组件仅支持 uni_modules 目录结构 ，请升级 HBuilderX 到 3.1.0 版本以上！");
