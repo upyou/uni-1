@@ -6,6 +6,8 @@ if (!Math) {
   "./pages/Cate/Cate.js";
   "./pages/Cart/Cart.js";
   "./pages/My/My.js";
+  "./subpkg/goods_detail/goods_detail.js";
+  "./subpkg/goods_list/goods_list.js";
 }
 const _sfc_main = {
   onLaunch: function() {
@@ -21,6 +23,23 @@ const _sfc_main = {
 };
 const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/HBuilderX/uni-1/App.vue"]]);
 function createApp() {
+  common_vendor.index.$http = common_vendor.$http;
+  common_vendor.$http.beforeRequest = function(options) {
+    common_vendor.wx$1.showLoading({
+      title: "数据加载中..."
+    });
+  };
+  common_vendor.$http.afterRequest = function() {
+    common_vendor.wx$1.hideLoading();
+  };
+  common_vendor.index.$showMsg = function(title = "请求失败", duration = 1500) {
+    common_vendor.index.showToast({
+      title,
+      duration,
+      icon: "error"
+    });
+  };
+  common_vendor.$http.baseUrl = "https://api-hmugo-web.itheima.net/api/public/v1";
   const app = common_vendor.createSSRApp(App);
   return {
     app
