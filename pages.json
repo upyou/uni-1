@@ -3,7 +3,7 @@
 	{
 		"path": "pages/Home/Home",
 		"style": {
-			"navigationBarTitleText": "黑马优选"
+			"navigationBarTitleText": "优购"
 		}
 	},
 	{
@@ -51,7 +51,7 @@
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "黑马优选",
+		"navigationBarTitleText": "优购",
 		"navigationBarBackgroundColor": "#c0153d",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {
