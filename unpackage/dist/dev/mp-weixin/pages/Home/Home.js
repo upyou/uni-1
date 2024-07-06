@@ -47,26 +47,40 @@ const _sfc_main = {
         });
       });
       this.floorList = res.message;
+    },
+    gotoSearch() {
+      common_vendor.index.navigateTo({
+        url: "/subpkg/search/search"
+      });
     }
   }
 };
+if (!Array) {
+  const _easycom_my_search2 = common_vendor.resolveComponent("my-search");
+  _easycom_my_search2();
+}
+const _easycom_my_search = () => "../../components/my-search/my-search.js";
+if (!Math) {
+  _easycom_my_search();
+}
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.f($data.swiperList, (item, k0, i0) => {
+    a: common_vendor.o($options.gotoSearch),
+    b: common_vendor.f($data.swiperList, (item, k0, i0) => {
       return {
         a: item.image_src,
         b: "/subpkg/goods_detail/goods_detail?id=" + item.goods_id,
         c: item.goods_id
       };
     }),
-    b: common_vendor.f($data.navList, (item, index, i0) => {
+    c: common_vendor.f($data.navList, (item, index, i0) => {
       return {
         a: item.image_src,
         b: index,
         c: common_vendor.o(($event) => $options.navClick(item.name), index)
       };
     }),
-    c: common_vendor.f($data.floorList, (item, i, i0) => {
+    d: common_vendor.f($data.floorList, (item, i, i0) => {
       return {
         a: item.floor_title.image_src,
         b: item.product_list[0].image_src,

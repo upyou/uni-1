@@ -1,0 +1,1 @@
+<view class="my-search-container" bindtap="{{b}}"><view class="my-search-box"><uni-icons wx:if="{{a}}" class="my-search-icon" u-i="d0c01fec-0" bind:__l="__l" u-p="{{a}}"></uni-icons><text>搜索</text></view></view>

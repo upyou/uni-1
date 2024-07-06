@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "优购",
-  "usingComponents": {}
+  "usingComponents": {
+    "my-search": "../../components/my-search/my-search"
+  }
 }

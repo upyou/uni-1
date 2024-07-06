@@ -8,8 +8,8 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "pages/Cate/Cate",
-                    "pathName": "pages/Cate/Cate",
+                    "name": "subpkg/search/search",
+                    "pathName": "subpkg/search/search",
                     "query": "",
                     "launchMode": "default",
                     "scene": null

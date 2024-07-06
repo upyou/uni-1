@@ -23,7 +23,7 @@ const _sfc_main = {
     },
     async getSystemInfo() {
       const wh = await common_vendor.index.getSystemInfo();
-      this.wh = wh.windowHeight;
+      this.wh = wh.windowHeight - 60;
     },
     onClickChange(i) {
       this.active = i;
@@ -36,12 +36,26 @@ const _sfc_main = {
           url: "/subpkg/goods_list/goods_list?cid=" + item.cat_id
         }
       );
+    },
+    gotoSearch() {
+      common_vendor.index.navigateTo({
+        url: "/subpkg/search/search"
+      });
     }
   }
 };
+if (!Array) {
+  const _easycom_my_search2 = common_vendor.resolveComponent("my-search");
+  _easycom_my_search2();
+}
+const _easycom_my_search = () => "../../components/my-search/my-search.js";
+if (!Math) {
+  _easycom_my_search();
+}
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.f($data.cateList, (itme, i, i0) => {
+    a: common_vendor.o($options.gotoSearch),
+    b: common_vendor.f($data.cateList, (itme, i, i0) => {
       return {
         a: common_vendor.t(itme.cat_name),
         b: common_vendor.n(i === $data.active ? "active" : ""),
@@ -49,8 +63,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         d: i
       };
     }),
-    b: $data.wh + "px",
-    c: common_vendor.f($data.cateListl2, (item, i, i0) => {
+    c: $data.wh + "px",
+    d: common_vendor.f($data.cateListl2, (item, i, i0) => {
       return {
         a: common_vendor.t(item.cat_name),
         b: common_vendor.f(item.children, (item2, i2, i1) => {
@@ -64,8 +78,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         c: i
       };
     }),
-    d: $data.wh + "px",
-    e: $data.scrollTop
+    e: $data.wh + "px",
+    f: $data.scrollTop
   };
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/HBuilderX/uni-1/pages/Cate/Cate.vue"]]);

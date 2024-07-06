@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<my-search @click="gotoSearch"></my-search>
 		<view class="scroll-view-container">
 			<view class="left">
 				<scroll-view
@@ -58,7 +59,7 @@
 			},
 			async getSystemInfo(){
 				const wh = await uni.getSystemInfo()
-				this.wh = wh.windowHeight
+				this.wh = wh.windowHeight - 60
 			},
 			onClickChange(i){
 				this.active = i
@@ -70,6 +71,12 @@
 					url:'/subpkg/goods_list/goods_list?cid=' + item.cat_id
 					}
 				)
+			},
+			gotoSearch(){
+				uni.navigateTo({
+					url:'/subpkg/search/search'
+				})
+				
 			}
 		},
 		
