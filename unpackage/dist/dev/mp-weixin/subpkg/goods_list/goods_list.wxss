@@ -1,0 +1,20 @@
+/* 水平间距 */
+/* 水平间距 */
+.goods-list .goods-item {
+  display: flex;
+  border-bottom: 1px solid #7f7f7f;
+}
+.goods-list .goods-item .goods-item-left image {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  padding: 10px;
+}
+.goods-list .goods-item .goods-item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.goods-list .goods-item .goods-item-right .goods-item-price {
+  color: red;
+}

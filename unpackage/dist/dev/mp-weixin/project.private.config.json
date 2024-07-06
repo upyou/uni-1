@@ -9,7 +9,7 @@
             "list": [
                 {
                     "name": "subpkg/search/search",
-                    "pathName": "subpkg/search/search",
+                    "pathName": "subpkg/goods_list/goods_list",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
