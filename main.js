@@ -1,8 +1,6 @@
-
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
-
 Vue.config.productionTip = false
 
 App.mpType = 'app'
@@ -18,10 +16,19 @@ app.$mount()
 import { createSSRApp } from 'vue'
 import App from './App.vue'
 import { $http } from '@escook/request-miniprogram'
-
+import pinia from './store/store'
+import tabBadge from './mixins/tab.js'
+import { useCartStore } from './store/cart'
+import { watch } from 'vue'
 export function createApp() {
+	const app = createSSRApp(App)
+	app.use(pinia)
+	app.mixin(tabBadge)
+	const store = useCartStore()
 	uni.$http = $http
-	
+	watch(store.setTotal,(n,o)=>{
+		store.setBadge()
+	})
 	$http.beforeRequest = function (options) {
 	  wx.showLoading({
 	    title: '数据加载中...',
@@ -41,7 +48,7 @@ export function createApp() {
 		})
 	}
 	$http.baseUrl = 'https://api-hmugo-web.itheima.net/api/public/v1'
-  const app = createSSRApp(App)
+	
   return {
     app
   }

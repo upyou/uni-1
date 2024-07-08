@@ -1,0 +1,49 @@
+/* 水平间距 */
+/* 水平间距 */
+.cart-title {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  border-bottom: 1px solid #efefef;
+}
+.cart-title text {
+  margin-left: 10px;
+}
+.goods-item {
+  display: flex;
+  border-bottom: 1px solid #efefef;
+}
+.goods-item .goods-item-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 6px;
+}
+.goods-item .goods-item-left image {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  padding: 10px;
+}
+.goods-item .goods-item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.goods-item .goods-item-right .goods-info-box .goods-item-price {
+  color: red;
+}
+.cart {
+  width: 100%;
+  height: 100%;
+}
+.cart .empty-cart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  height: 667px;
+  justify-content: center;
+  align-items: center;
+}

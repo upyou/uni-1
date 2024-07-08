@@ -1,32 +1,30 @@
 {
 	"pages": [
-	{
-		"path": "pages/Home/Home",
-		"style": {
-			"navigationBarTitleText": "黑马优选"
-		}
-	},
-	{
-		"path" : "pages/Cate/Cate",
-		"style" : 
 		{
-			"navigationBarTitleText" : ""
-		}
-	},
-	{
-		"path" : "pages/Cart/Cart",
-		"style" : 
+			"path": "pages/Home/Home",
+			"style": {
+				"navigationBarTitleText": "黑马优选"
+			}
+		},
 		{
-			"navigationBarTitleText" : ""
-		}
-	},
-	{
-		"path" : "pages/My/My",
-		"style" : 
+			"path": "pages/Cate/Cate",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
 		{
-			"navigationBarTitleText" : ""
+			"path": "pages/Cart/Cart",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/My/My",
+			"style": {
+				"navigationBarTitleText": ""
+			}
 		}
-	}],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "黑马优选",
@@ -37,31 +35,36 @@
 		}
 	},
 	"tabBar": {
-		"list":[
+		"list": [
 			{
-			"pagePath": "pages/Home/Home",
-			"text": "首页",
-			"iconPath": "static/tab_icons/home.png",
-			"selectedIconPath": "static/tab_icons/home-active.png"
+				"pagePath": "pages/Home/Home",
+				"text": "首页",
+				"iconPath": "static/tab_icons/home.png",
+				"selectedIconPath": "static/tab_icons/home-active.png"
 			},
 			{
-			"pagePath": "pages/Cate/Cate",
-			"text": "分类",
-			"iconPath": "static/tab_icons/cate.png",
-			"selectedIconPath": "static/tab_icons/cate-active.png"
+				"pagePath": "pages/Cate/Cate",
+				"text": "分类",
+				"iconPath": "static/tab_icons/cate.png",
+				"selectedIconPath": "static/tab_icons/cate-active.png"
 			},
 			{
-			"pagePath": "pages/Cart/Cart",
-			"text": "购物车",
-			"iconPath": "static/tab_icons/cart.png",
-			"selectedIconPath": "static/tab_icons/cart-active.png"
+				"pagePath": "pages/Cart/Cart",
+				"text": "购物车",
+				"iconPath": "static/tab_icons/cart.png",
+				"selectedIconPath": "static/tab_icons/cart-active.png"
 			},
 			{
-			"pagePath": "pages/My/My",
-			"text": "我的",
-			"iconPath": "static/tab_icons/my.png",
-			"selectedIconPath": "static/tab_icons/my-active.png"
+				"pagePath": "pages/My/My",
+				"text": "我的",
+				"iconPath": "static/tab_icons/my.png",
+				"selectedIconPath": "static/tab_icons/my-active.png"
 			}
 		]
+	},
+	"dependencies": {
+		"@escook/request-miniprogram": "^0.2.1",
+		"pinia": "^2.1.7",
+		"pinia-plugin-persistedstate": "^3.2.1"
 	}
 }

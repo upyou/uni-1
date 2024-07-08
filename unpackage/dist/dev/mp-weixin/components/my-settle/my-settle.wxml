@@ -1,0 +1,1 @@
+<view class="my-settle"><label class="radio"><radio bindtap="{{a}}" checked="{{b}}" color="#C00000"/><text>全选</text></label><view class="amount-box"><view class="amount"> 合计: <text style="color:red;font-weight:bold">￥{{c}}</text></view></view><view class="btn-settle"> 提交({{d}}) </view></view>

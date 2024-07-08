@@ -1,8 +1,11 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const store_cart = require("../../store/cart.js");
+const store = store_cart.useCartStore();
 const _sfc_main = {
   data() {
     return {
+      store,
       id: 0,
       goodsInfo: {},
       options: [
@@ -31,6 +34,7 @@ const _sfc_main = {
     };
   },
   onLoad(option) {
+    this.options[1].info = store.setTotal;
     this.id = option.goods_id;
     this.getGoodsDetail();
   },
@@ -51,6 +55,20 @@ const _sfc_main = {
         common_vendor.index.switchTab({
           url: "/pages/Cart/Cart"
         });
+      }
+    },
+    buttonClick(e) {
+      if (e.content.text === "加入购物车") {
+        const goods = {
+          goods_id: this.goodsInfo.goods_id,
+          goods_name: this.goodsInfo.goods_name,
+          goods_price: this.goodsInfo.goods_price,
+          goods_count: 1,
+          goods_small_logo: this.goodsInfo.goods_small_logo,
+          goods_state: true
+        };
+        this.store.addCart(goods);
+        this.options[1].info = this.store.setTotal;
       }
     }
   }
@@ -84,7 +102,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     f: $data.goodsInfo.goods_introduce,
     g: common_vendor.o($options.onClick),
-    h: common_vendor.o(_ctx.buttonClick),
+    h: common_vendor.o($options.buttonClick),
     i: common_vendor.p({
       options: $data.options,
       fill: true,

@@ -8,9 +8,9 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "subpkg/goods_detail/goods_detail",
-                    "pathName": "subpkg/goods_detail/goods_detail",
-                    "query": "goods_id=395",
+                    "name": "pages/Cart/Cart",
+                    "pathName": "pages/Cart/Cart",
+                    "query": "",
                     "launchMode": "default",
                     "scene": null
                 }
