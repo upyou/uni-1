@@ -4,6 +4,7 @@ const common_vendor = require("./common/vendor.js");
 const mixins_tab = require("./mixins/tab.js");
 const store_store = require("./store/store.js");
 const store_cart = require("./store/cart.js");
+const store_user = require("./store/user.js");
 if (!Math) {
   "./pages/Home/Home.js";
   "./pages/Cate/Cate.js";
@@ -18,6 +19,7 @@ function createApp() {
   app.use(store_store.pinia);
   app.mixin(mixins_tab.tabBadge);
   const store = store_cart.useCartStore();
+  const ustore = store_user.useUserStore();
   common_vendor.index.$http = common_vendor.$http;
   common_vendor.watch(store.setTotal, (n, o) => {
     store.setBadge();
@@ -26,6 +28,11 @@ function createApp() {
     common_vendor.wx$1.showLoading({
       title: "数据加载中..."
     });
+    if (options.url.indexOf("/my") !== -1) {
+      options.header = {
+        Authorization: ustore.token
+      };
+    }
   };
   common_vendor.$http.afterRequest = function() {
     common_vendor.wx$1.hideLoading();

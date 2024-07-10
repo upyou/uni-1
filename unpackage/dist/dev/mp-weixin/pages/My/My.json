@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "",
-  "usingComponents": {}
+  "usingComponents": {
+    "my-login": "../../components/my-login/my-login",
+    "my-user-info": "../../components/my-userInfo/my-userInfo"
+  }
 }

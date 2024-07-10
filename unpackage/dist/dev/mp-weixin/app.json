@@ -15,6 +15,7 @@
       ]
     }
   ],
+  "requiredPrivateInfos": ["chooseAddress"],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "优购",

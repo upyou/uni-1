@@ -35,6 +35,9 @@ const useCartStore = common_vendor.defineStore("cart", {
     },
     setChecked(check) {
       this.cart.forEach((item, i) => item.goods_state = check);
+    },
+    clearCart() {
+      this.cart = [];
     }
   },
   getters: {

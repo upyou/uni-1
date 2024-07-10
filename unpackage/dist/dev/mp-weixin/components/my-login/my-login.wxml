@@ -1,0 +1,1 @@
+<view class="login"><uni-icons wx:if="{{a}}" u-i="d34cc694-0" bind:__l="__l" u-p="{{a}}"></uni-icons><button type="warn" open-type="chooseAvatar" bindchooseavatar="{{b}}">一键登录</button><text>登录后享受更多权益</text></view>

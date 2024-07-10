@@ -1,0 +1,71 @@
+/* 水平间距 */
+/* 水平间距 */
+.my-container {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+.my-container .top-box {
+  height: 400rpx;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.my-container .top-box .avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 5px black;
+}
+.my-container .top-box .username {
+  margin-top: 10px;
+  color: white;
+}
+.my-container .panel-list {
+  position: relative;
+  top: -10px;
+  width: 90%;
+  margin: auto;
+}
+.my-container .panel-list .panel {
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.my-container .panel-list .panel .panel-item-list {
+  display: flex;
+  padding: 5px;
+  height: 35px;
+  line-height: 35px;
+}
+.my-container .panel-list .panel .panel-item-list .text {
+  flex: 1;
+}
+.my-container .panel-list .panel .panel-title {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  font-size: 15px;
+  border-bottom: 1px solid #f4f4f4;
+  margin-left: 5px;
+}
+.my-container .panel-list .panel .panel-body {
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+.my-container .panel-list .panel .panel-body .panel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+.my-container .panel-list .panel .panel-body .panel-item .icon {
+  width: 35px;
+  height: 35px;
+}
