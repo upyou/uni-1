@@ -7,7 +7,7 @@
 				<uni-icons type="shop" size="30" class="cart-title-icon"></uni-icons>
 				<text>购物车</text>
 			</view>
-		
+
 			<uni-swipe-action>
 				<view v-for="(item,i) in store.cart" :key="i">
 					<uni-swipe-action-item :right-options="options" @click="store.swipeCilck(item)">
@@ -22,9 +22,10 @@
 								</view>
 								<view class="goods-info-box">
 									<view class="goods-item-price">
-									￥{{item.goods_price.toFixed(2)}}
+										￥{{item.goods_price.toFixed(2)}}
 									</view>
-									<uni-number-box :value="item.goods_count" :min="1" @change="(value)=>store.countChange(value,item)"/>
+									<uni-number-box :value="item.goods_count" :min="1"
+										@change="(value)=>store.countChange(value,item)" />
 								</view>
 							</view>
 						</view>
@@ -33,89 +34,99 @@
 			</uni-swipe-action>
 		</view>
 		<view class="empty-cart" v-else>
-			<text>购物车空空如也</text> 
+			<text>购物车空空如也</text>
 		</view>
-	</view>	
+	</view>
 </template>
 
 <script>
-	import { storeToRefs } from 'pinia'
-import { useCartStore } from '../../store/cart'
+	import {
+		storeToRefs
+	} from 'pinia'
+	import {
+		useCartStore
+	} from '../../store/cart'
 	const store = useCartStore()
-	const { setTotal } = storeToRefs(store)
+	const {
+		setTotal
+	} = storeToRefs(store)
 	export default {
 		data() {
 			return {
-				store:store,
-				options:[
-					{
-						text:'删除',
-						style:{
-							 backgroundColor: '#C00000'
-						}
+				store: store,
+				options: [{
+					text: '删除',
+					style: {
+						backgroundColor: '#C00000'
 					}
-				]
+				}]
 			}
 		},
-		methods: {
-		},
-		watch:{
-			setTotal(){
+		methods: {},
+		watch: {
+			setTotal() {
 				store.setBadge()
 			}
 		}
 	}
-</script >
+</script>
 
 <style lang="scss">
-.cart-title{
-	height: 40px;
-	display: flex;
-	align-items: center;
-	padding-left: 5px;
-	border-bottom: 1px solid #efefef;
-	text{
-		margin-left:10px ;
+	.cart-title {
+		height: 40px;
+		display: flex;
+		align-items: center;
+		padding-left: 5px;
+		border-bottom: 1px solid #efefef;
+
+		text {
+			margin-left: 10px;
+		}
 	}
-}
-.goods-item{
+
+	.goods-item {
 		display: flex;
 		border-bottom: 1px solid #efefef;
-		.goods-item-left{
+
+		.goods-item-left {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			padding-left:6px ;
-			image{
+			padding-left: 6px;
+
+			image {
 				width: 120px;
 				height: 120px;
 				margin-right: 20px;
 				padding: 10px;
 			}
 		}
-		.goods-item-right{
+
+		.goods-item-right {
 			display: flex;
 			flex-direction: column;
-			justify-content:space-around;
-			.goods-info-box{
-				.goods-item-price{
-				color: red;
+			justify-content: space-around;
+
+			.goods-info-box {
+				.goods-item-price {
+					color: red;
 				}
 			}
 		}
-}
-.cart{
-	width: 100%;
-	height: 100%;
-	.empty-cart{
-		display: flex;
-		flex-direction: column;
+	}
+
+	.cart {
 		width: 100%;
 		height: 100%;
-		height: 667px;
-		justify-content: center;
-		align-items: center;
-	}
-}
 
+		.empty-cart {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			height: 667px;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 </style>

@@ -7,14 +7,12 @@ const _sfc_main = {
   data() {
     return {
       store,
-      options: [
-        {
-          text: "删除",
-          style: {
-            backgroundColor: "#C00000"
-          }
+      options: [{
+        text: "删除",
+        style: {
+          backgroundColor: "#C00000"
         }
-      ]
+      }]
     };
   },
   methods: {},

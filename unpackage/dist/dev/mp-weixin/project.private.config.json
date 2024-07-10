@@ -9,7 +9,7 @@
             "list": [
                 {
                     "name": "pages/Cart/Cart",
-                    "pathName": "pages/Cart/Cart",
+                    "pathName": "pages/My/My",
                     "query": "",
                     "launchMode": "default",
                     "scene": null

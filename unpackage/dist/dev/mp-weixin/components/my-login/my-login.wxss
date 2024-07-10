@@ -1,0 +1,37 @@
+/* 水平间距 */
+/* 水平间距 */
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 750rpx;
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+.login button {
+  width: 90%;
+  border-radius: 50px;
+  margin: 10px;
+}
+.login image {
+  width: 100px;
+  height: 100px;
+}
+.login text {
+  font-size: 12px;
+  color: gray;
+}
+.login::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(50%);
+}
